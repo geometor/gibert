@@ -1,0 +1,1 @@
+Grounded in *Catalogue of Triangle Cubics* (**Bernard Gibert**), this mathematical catalog models geometric structures as atomic, composable constructions in exact ``SymPy`` algebra—connecting symbolic synthesis directly to the historical treatises of the `GEOMETOR <https://geometor.com/books/>`_ semantic digital archive.

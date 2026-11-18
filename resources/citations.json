@@ -1,0 +1,10 @@
+{
+  "citations": [
+    {
+      "id": "primary-work",
+      "author": "Bernard Gibert",
+      "title": "Catalogue of Triangle Cubics",
+      "repository": "geometor/gibert"
+    }
+  ]
+}
