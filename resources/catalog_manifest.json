@@ -2,5 +2,94 @@
   "catalog": "gibert",
   "title": "Catalogue of Triangle Cubics",
   "author": "Bernard Gibert",
-  "entries": []
+  "entries": [
+    {
+      "id": "K001",
+      "chapter": "K-Series Cubics",
+      "title": "K001 — Neuberg Cubic",
+      "source_locus": "CTC K001 / pK(X6, X30)",
+      "field": "Q(a, b, c, S, sqrt(3))",
+      "status": "verified"
+    },
+    {
+      "id": "K002",
+      "chapter": "K-Series Cubics",
+      "title": "K002 — Thomson Cubic",
+      "source_locus": "CTC K002 / pK(X6, X2)",
+      "field": "Q(a, b, c)",
+      "status": "verified"
+    },
+    {
+      "id": "K003",
+      "chapter": "K-Series Cubics",
+      "title": "K003 — McCay Cubic",
+      "source_locus": "CTC K003 / pK(X6, X3)",
+      "field": "Q(a, b, c)",
+      "status": "verified"
+    },
+    {
+      "id": "K004",
+      "chapter": "K-Series Cubics",
+      "title": "K004 — Darboux Cubic",
+      "source_locus": "CTC K004 / pK(X6, X20)",
+      "field": "Q(a, b, c)",
+      "status": "verified"
+    },
+    {
+      "id": "K005",
+      "chapter": "K-Series Cubics",
+      "title": "K005 — Napoleon–Feuerbach Cubic",
+      "source_locus": "CTC K005 / pK(X6, X5)",
+      "field": "Q(a, b, c, S, sqrt(3))",
+      "status": "verified"
+    },
+    {
+      "id": "K006",
+      "chapter": "K-Series Cubics",
+      "title": "K006 — Orthocubic",
+      "source_locus": "CTC K006 / pK(X6, X4)",
+      "field": "Q(a, b, c)",
+      "status": "verified"
+    },
+    {
+      "id": "K007",
+      "chapter": "K-Series Cubics",
+      "title": "K007 — Lucas Cubic",
+      "source_locus": "CTC K007 / pK(X2, X69)",
+      "field": "Q(a, b, c)",
+      "status": "verified"
+    },
+    {
+      "id": "K008",
+      "chapter": "K-Series Cubics",
+      "title": "K008 — Droussent Cubic",
+      "source_locus": "CTC K008 / pK(X2, X316)",
+      "field": "Q(a, b, c)",
+      "status": "verified"
+    },
+    {
+      "id": "K009",
+      "chapter": "K-Series Cubics",
+      "title": "K009 — Lemoine Cubic",
+      "source_locus": "CTC K009 / K(O)",
+      "field": "Q(a, b, c)",
+      "status": "verified"
+    },
+    {
+      "id": "K010",
+      "chapter": "K-Series Cubics",
+      "title": "K010 — Simson Cubic",
+      "source_locus": "CTC K010 / cK(#X2, X69)",
+      "field": "Q(a, b, c)",
+      "status": "verified"
+    },
+    {
+      "id": "K011",
+      "chapter": "K-Series Cubics",
+      "title": "K011 — Tucker Cubic",
+      "source_locus": "CTC K011 / Tucker",
+      "field": "Q(a, b, c)",
+      "status": "verified"
+    }
+  ]
 }

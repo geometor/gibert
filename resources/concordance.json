@@ -1,5 +1,61 @@
 {
   "catalog": "gibert",
-  "sister_repositories": ["divine", "knott", "elements", "pacioli", "polyhedra"],
-  "mappings": []
+  "sister_repositories": ["etc", "elements", "euclid", "divine", "knott", "pacioli", "polyhedra"],
+  "mappings": [
+    {
+      "id": "K001",
+      "etc_centers": ["X_1", "X_3", "X_4", "X_13", "X_14", "X_15", "X_16", "X_30"],
+      "elements": ["I.1", "I.47", "IV.4", "IV.5"]
+    },
+    {
+      "id": "K002",
+      "etc_centers": ["X_1", "X_2", "X_3", "X_4", "X_6", "X_9", "X_57"],
+      "elements": ["IV.4", "IV.5"]
+    },
+    {
+      "id": "K003",
+      "etc_centers": ["X_1", "X_3", "X_4"],
+      "elements": ["IV.4", "IV.5"]
+    },
+    {
+      "id": "K004",
+      "etc_centers": ["X_1", "X_3", "X_4", "X_20", "X_40", "X_64", "X_84"],
+      "elements": ["I.12", "IV.4", "IV.5"]
+    },
+    {
+      "id": "K005",
+      "etc_centers": ["X_1", "X_3", "X_4", "X_5", "X_17", "X_18", "X_54"],
+      "elements": ["I.1", "IV.5"]
+    },
+    {
+      "id": "K006",
+      "etc_centers": ["X_1", "X_3", "X_4"],
+      "elements": ["I.12", "IV.5"]
+    },
+    {
+      "id": "K007",
+      "etc_centers": ["X_2", "X_4", "X_7", "X_8", "X_20", "X_69"],
+      "elements": ["I.10", "I.12"]
+    },
+    {
+      "id": "K008",
+      "etc_centers": ["X_2", "X_67", "X_316"],
+      "elements": ["IV.5"]
+    },
+    {
+      "id": "K009",
+      "etc_centers": ["X_3", "X_4", "X_32", "X_56"],
+      "elements": ["I.10", "I.11", "IV.5"]
+    },
+    {
+      "id": "K010",
+      "etc_centers": ["X_2"],
+      "elements": ["I.12", "IV.5"]
+    },
+    {
+      "id": "K011",
+      "etc_centers": ["X_4", "X_69"],
+      "elements": ["I.37", "I.38"]
+    }
+  ]
 }
