@@ -1,0 +1,128 @@
+src.geometor.gibert.centers
+===========================
+
+.. py:module:: src.geometor.gibert.centers
+
+.. autoapi-nested-parse::
+
+   Exact symbolic barycentric coordinates for Kimberling triangle centers.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   src.geometor.gibert.centers.BarycentricPoint
+   src.geometor.gibert.centers.S
+   src.geometor.gibert.centers.r3
+   src.geometor.gibert.centers.SA
+   src.geometor.gibert.centers.SB
+   src.geometor.gibert.centers.SC
+   src.geometor.gibert.centers.S2
+   src.geometor.gibert.centers.CENTER_SPECS
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   src.geometor.gibert.centers.CenterSpec
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   src.geometor.gibert.centers.isogonal_conjugate
+   src.geometor.gibert.centers.isotomic_conjugate
+   src.geometor.gibert.centers.evaluate_cubic_at
+   src.geometor.gibert.centers.barycentric_to_cartesian
+
+
+Module Contents
+---------------
+
+.. py:data:: BarycentricPoint
+
+.. py:data:: S
+
+.. py:data:: r3
+
+.. py:data:: SA
+   :type:  sympy.Expr
+
+.. py:data:: SB
+   :type:  sympy.Expr
+
+.. py:data:: SC
+   :type:  sympy.Expr
+
+.. py:data:: S2
+   :type:  sympy.Expr
+
+.. py:class:: CenterSpec
+
+   Exact symbolic specification of a Kimberling triangle center.
+
+
+   .. py:attribute:: index
+      :type:  int
+
+
+   .. py:attribute:: code
+      :type:  str
+
+
+   .. py:attribute:: name
+      :type:  str
+
+
+   .. py:attribute:: barycentric
+      :type:  BarycentricPoint
+
+
+.. py:function:: isogonal_conjugate(pt: BarycentricPoint) -> BarycentricPoint
+
+   Return the exact isogonal conjugate ``(a^2 y z : b^2 z x : c^2 x y)``.
+
+
+.. py:function:: isotomic_conjugate(pt: BarycentricPoint) -> BarycentricPoint
+
+   Return the exact isotomic conjugate ``(y z : z x : x y)``.
+
+
+.. py:function:: evaluate_cubic_at(poly: sympy.Expr, pt: BarycentricPoint) -> bool
+
+   Return ``True`` iff ``poly`` vanishes identically at ``pt``.
+
+   Reduces the algebraic extensions ``S^2 = S_A S_B + S_B S_C + S_C S_A`` and
+   ``r3^2 = 3`` via exact polynomial division in SymPy.
+
+   :param poly: Homogeneous cubic polynomial in ``(x, y, z)``.
+   :param pt: Exact symbolic barycentric coordinates ``(u, v, w)``.
+
+   :returns: ``True`` if ``poly(u, v, w) == 0`` identically over ``Q(a, b, c, S, sqrt(3))``.
+
+
+.. py:data:: CENTER_SPECS
+   :type:  dict[str, CenterSpec]
+
+.. py:function:: barycentric_to_cartesian(pt: BarycentricPoint, a_val: float, b_val: float, c_val: float, vertices: tuple[tuple[float, float], tuple[float, float], tuple[float, float]]) -> tuple[float, float] | None
+
+   Convert symbolic barycentric coordinates to 2D Cartesian coordinates for SVG rendering.
+
+   Returns ``None`` if the point lies at infinity (sum of coordinates is zero).
+
+   :param pt: Symbolic barycentric triple ``(x, y, z)``.
+   :param a_val: Numeric side length ``a = |BC|``.
+   :param b_val: Numeric side length ``b = |CA|``.
+   :param c_val: Numeric side length ``c = |AB|``.
+   :param vertices: Cartesian coordinates ``(A, B, C)`` of the reference triangle.
+
+   :returns: ``(X, Y)`` Cartesian coordinates, or ``None`` for points at infinity.
+
+

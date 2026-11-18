@@ -1,0 +1,53 @@
+src.geometor.gibert.render
+==========================
+
+.. py:module:: src.geometor.gibert.render
+
+.. autoapi-nested-parse::
+
+   Theme-adaptive ``.euclid-graphic`` SVG renderer for K-series triangle cubics.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   src.geometor.gibert.render.DEFAULT_SVG_DIR
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   src.geometor.gibert.render.render_cubic_svg
+   src.geometor.gibert.render.render_all_cubics
+
+
+Module Contents
+---------------
+
+.. py:data:: DEFAULT_SVG_DIR
+
+.. py:function:: render_cubic_svg(spec: src.geometor.gibert.cubics.CubicSpec, output_path: pathlib.Path | None = None, grid_n: int = 200) -> pathlib.Path
+
+   Render a theme-adaptive ``.euclid-graphic`` SVG for a K-series cubic.
+
+   :param spec: Cubic specification from :data:`K_SERIES_CUBICS`.
+   :param output_path: Destination SVG file path. Defaults to ``docsrc/_static/svg/<id>.svg``.
+   :param grid_n: Grid resolution per axis for contour extraction.
+
+   :returns: Path to the written SVG file.
+
+
+.. py:function:: render_all_cubics(output_dir: pathlib.Path | None = None) -> list[pathlib.Path]
+
+   Render SVG diagrams for all registered K-series cubics.
+
+   :param output_dir: Optional directory override for generated SVGs.
+
+   :returns: List of paths to the generated SVG files.
+
+

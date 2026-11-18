@@ -106,6 +106,9 @@
         <li class="toctree-l1"><a class="reference internal" href="__main__/index.html">src.geometor.gibert.__main__</a></li>
         <li class="toctree-l1"><a class="reference internal" href="app/index.html">src.geometor.gibert.app</a></li>
         <li class="toctree-l1"><a class="reference internal" href="catalog/index.html">src.geometor.gibert.catalog</a></li>
+        <li class="toctree-l1"><a class="reference internal" href="centers/index.html">src.geometor.gibert.centers</a></li>
+        <li class="toctree-l1"><a class="reference internal" href="cubics/index.html">src.geometor.gibert.cubics</a></li>
+        <li class="toctree-l1"><a class="reference internal" href="render/index.html">src.geometor.gibert.render</a></li>
         </ul>
         </div>
         </section>
@@ -113,6 +116,12 @@
         <h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h2>
         <table class="autosummary longtable docutils align-default">
         <tbody>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#src.geometor.gibert.CENTER_SPECS" title="src.geometor.gibert.CENTER_SPECS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CENTER_SPECS</span></code></a></p></td>
+        <td><p></p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#src.geometor.gibert.K_SERIES_CUBICS" title="src.geometor.gibert.K_SERIES_CUBICS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">K_SERIES_CUBICS</span></code></a></p></td>
+        <td><p></p></td>
+        </tr>
         <tr class="row-odd"><td><p><a class="reference internal" href="#src.geometor.gibert.__version__" title="src.geometor.gibert.__version__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__version__</span></code></a></p></td>
         <td><p></p></td>
         </tr>
@@ -125,6 +134,12 @@
         <tbody>
         <tr class="row-odd"><td><p><a class="reference internal" href="#src.geometor.gibert.CatalogEntrySpec" title="src.geometor.gibert.CatalogEntrySpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CatalogEntrySpec</span></code></a></p></td>
         <td><p>Metadata descriptor for an atomic mathematical catalog entry.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#src.geometor.gibert.CenterSpec" title="src.geometor.gibert.CenterSpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CenterSpec</span></code></a></p></td>
+        <td><p>Exact symbolic specification of a Kimberling triangle center.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#src.geometor.gibert.CubicSpec" title="src.geometor.gibert.CubicSpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CubicSpec</span></code></a></p></td>
+        <td><p>Exact symbolic specification of a Bernard Gibert K-series triangle cubic.</p></td>
         </tr>
         </tbody>
         </table>
@@ -144,6 +159,30 @@
         </tr>
         <tr class="row-even"><td><p><a class="reference internal" href="#src.geometor.gibert.load_catalog_manifest" title="src.geometor.gibert.load_catalog_manifest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_catalog_manifest</span></code></a>([manifest_path]) → list[CatalogEntrySpec]</p></td>
         <td><p>Load atomic catalog entries from <code class="docutils literal notranslate"><span class="pre">resources/catalog_manifest.json</span></code>.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#src.geometor.gibert.evaluate_cubic_at" title="src.geometor.gibert.evaluate_cubic_at"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluate_cubic_at</span></code></a>(poly, pt) → bool</p></td>
+        <td><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> iff <code class="docutils literal notranslate"><span class="pre">poly</span></code> vanishes identically at <code class="docutils literal notranslate"><span class="pre">pt</span></code>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#src.geometor.gibert.isogonal_conjugate" title="src.geometor.gibert.isogonal_conjugate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isogonal_conjugate</span></code></a>(pt) → BarycentricPoint</p></td>
+        <td><p>Return the exact isogonal conjugate <code class="docutils literal notranslate"><span class="pre">(a^2</span> <span class="pre">y</span> <span class="pre">z</span> <span class="pre">:</span> <span class="pre">b^2</span> <span class="pre">z</span> <span class="pre">x</span> <span class="pre">:</span> <span class="pre">c^2</span> <span class="pre">x</span> <span class="pre">y)</span></code>.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#src.geometor.gibert.isotomic_conjugate" title="src.geometor.gibert.isotomic_conjugate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isotomic_conjugate</span></code></a>(pt) → BarycentricPoint</p></td>
+        <td><p>Return the exact isotomic conjugate <code class="docutils literal notranslate"><span class="pre">(y</span> <span class="pre">z</span> <span class="pre">:</span> <span class="pre">z</span> <span class="pre">x</span> <span class="pre">:</span> <span class="pre">x</span> <span class="pre">y)</span></code>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#src.geometor.gibert.pk_isogonal" title="src.geometor.gibert.pk_isogonal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pk_isogonal</span></code></a>(pivot) → sympy.Expr</p></td>
+        <td><p>Return the exact homogeneous barycentric polynomial for <code class="docutils literal notranslate"><span class="pre">pK(X6,</span> <span class="pre">P)</span></code>.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#src.geometor.gibert.pk_isotomic" title="src.geometor.gibert.pk_isotomic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pk_isotomic</span></code></a>(pivot) → sympy.Expr</p></td>
+        <td><p>Return the exact homogeneous barycentric polynomial for <code class="docutils literal notranslate"><span class="pre">pK(X2,</span> <span class="pre">P)</span></code>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#src.geometor.gibert.verify_cubic_incidences" title="src.geometor.gibert.verify_cubic_incidences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">verify_cubic_incidences</span></code></a>(cubic_id) → dict[str, bool]</p></td>
+        <td><p>Verify exact symbolic vanishing of a K-series cubic at all claimed centers.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#src.geometor.gibert.render_all_cubics" title="src.geometor.gibert.render_all_cubics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">render_all_cubics</span></code></a>([output_dir]) → list[pathlib.Path]</p></td>
+        <td><p>Render SVG diagrams for all registered K-series cubics.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#src.geometor.gibert.render_cubic_svg" title="src.geometor.gibert.render_cubic_svg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">render_cubic_svg</span></code></a>(spec[, output_path, grid_n]) → pathlib.Path</p></td>
+        <td><p>Render a theme-adaptive <code class="docutils literal notranslate"><span class="pre">.euclid-graphic</span></code> SVG for a K-series cubic.</p></td>
         </tr>
         </tbody>
         </table>
@@ -235,6 +274,217 @@
         </dd></dl>
 
         <dl class="py data">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CENTER_SPECS">
+        <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">CENTER_SPECS</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#src.geometor.gibert.CenterSpec" title="src.geometor.gibert.CenterSpec"><span class="pre">CenterSpec</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#src.geometor.gibert.CENTER_SPECS" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CenterSpec">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">CenterSpec</span></span><a class="headerlink" href="#src.geometor.gibert.CenterSpec" title="Link to this definition">¶</a></dt>
+        <dd><p>Exact symbolic specification of a Kimberling triangle center.</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CenterSpec.index">
+        <span class="sig-name descname"><span class="pre">index</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#src.geometor.gibert.CenterSpec.index" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CenterSpec.code">
+        <span class="sig-name descname"><span class="pre">code</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#src.geometor.gibert.CenterSpec.code" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CenterSpec.name">
+        <span class="sig-name descname"><span class="pre">name</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#src.geometor.gibert.CenterSpec.name" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CenterSpec.barycentric">
+        <span class="sig-name descname"><span class="pre">barycentric</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="centers/index.html#src.geometor.gibert.centers.BarycentricPoint" title="src.geometor.gibert.centers.BarycentricPoint"><span class="pre">BarycentricPoint</span></a></span><a class="headerlink" href="#src.geometor.gibert.CenterSpec.barycentric" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="src.geometor.gibert.evaluate_cubic_at">
+        <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">evaluate_cubic_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.Expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="centers/index.html#src.geometor.gibert.centers.BarycentricPoint" title="src.geometor.gibert.centers.BarycentricPoint"><span class="pre">BarycentricPoint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#src.geometor.gibert.evaluate_cubic_at" title="Link to this definition">¶</a></dt>
+        <dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> iff <code class="docutils literal notranslate"><span class="pre">poly</span></code> vanishes identically at <code class="docutils literal notranslate"><span class="pre">pt</span></code>.</p>
+        <p>Reduces the algebraic extensions <code class="docutils literal notranslate"><span class="pre">S^2</span> <span class="pre">=</span> <span class="pre">S_A</span> <span class="pre">S_B</span> <span class="pre">+</span> <span class="pre">S_B</span> <span class="pre">S_C</span> <span class="pre">+</span> <span class="pre">S_C</span> <span class="pre">S_A</span></code> and
+        <code class="docutils literal notranslate"><span class="pre">r3^2</span> <span class="pre">=</span> <span class="pre">3</span></code> via exact polynomial division in SymPy.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>poly</strong> – Homogeneous cubic polynomial in <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code>.</p></li>
+        <li><p><strong>pt</strong> – Exact symbolic barycentric coordinates <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v,</span> <span class="pre">w)</span></code>.</p></li>
+        </ul>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">poly(u,</span> <span class="pre">v,</span> <span class="pre">w)</span> <span class="pre">==</span> <span class="pre">0</span></code> identically over <code class="docutils literal notranslate"><span class="pre">Q(a,</span> <span class="pre">b,</span> <span class="pre">c,</span> <span class="pre">S,</span> <span class="pre">sqrt(3))</span></code>.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="src.geometor.gibert.isogonal_conjugate">
+        <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">isogonal_conjugate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="centers/index.html#src.geometor.gibert.centers.BarycentricPoint" title="src.geometor.gibert.centers.BarycentricPoint"><span class="pre">BarycentricPoint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="centers/index.html#src.geometor.gibert.centers.BarycentricPoint" title="src.geometor.gibert.centers.BarycentricPoint"><span class="pre">BarycentricPoint</span></a></span></span><a class="headerlink" href="#src.geometor.gibert.isogonal_conjugate" title="Link to this definition">¶</a></dt>
+        <dd><p>Return the exact isogonal conjugate <code class="docutils literal notranslate"><span class="pre">(a^2</span> <span class="pre">y</span> <span class="pre">z</span> <span class="pre">:</span> <span class="pre">b^2</span> <span class="pre">z</span> <span class="pre">x</span> <span class="pre">:</span> <span class="pre">c^2</span> <span class="pre">x</span> <span class="pre">y)</span></code>.</p>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="src.geometor.gibert.isotomic_conjugate">
+        <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">isotomic_conjugate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="centers/index.html#src.geometor.gibert.centers.BarycentricPoint" title="src.geometor.gibert.centers.BarycentricPoint"><span class="pre">BarycentricPoint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="centers/index.html#src.geometor.gibert.centers.BarycentricPoint" title="src.geometor.gibert.centers.BarycentricPoint"><span class="pre">BarycentricPoint</span></a></span></span><a class="headerlink" href="#src.geometor.gibert.isotomic_conjugate" title="Link to this definition">¶</a></dt>
+        <dd><p>Return the exact isotomic conjugate <code class="docutils literal notranslate"><span class="pre">(y</span> <span class="pre">z</span> <span class="pre">:</span> <span class="pre">z</span> <span class="pre">x</span> <span class="pre">:</span> <span class="pre">x</span> <span class="pre">y)</span></code>.</p>
+        </dd></dl>
+
+        <dl class="py data">
+        <dt class="sig sig-object py" id="src.geometor.gibert.K_SERIES_CUBICS">
+        <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">K_SERIES_CUBICS</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#src.geometor.gibert.CubicSpec" title="src.geometor.gibert.CubicSpec"><span class="pre">CubicSpec</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#src.geometor.gibert.K_SERIES_CUBICS" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">CubicSpec</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec" title="Link to this definition">¶</a></dt>
+        <dd><p>Exact symbolic specification of a Bernard Gibert K-series triangle cubic.</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.id">
+        <span class="sig-name descname"><span class="pre">id</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.id" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.order">
+        <span class="sig-name descname"><span class="pre">order</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.order" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.name">
+        <span class="sig-name descname"><span class="pre">name</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.name" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.classification">
+        <span class="sig-name descname"><span class="pre">classification</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.classification" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.conjugacy">
+        <span class="sig-name descname"><span class="pre">conjugacy</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.conjugacy" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.pole">
+        <span class="sig-name descname"><span class="pre">pole</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.pole" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.pivot">
+        <span class="sig-name descname"><span class="pre">pivot</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.pivot" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.claimed_centers">
+        <span class="sig-name descname"><span class="pre">claimed_centers</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.claimed_centers" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.off_curve_center">
+        <span class="sig-name descname"><span class="pre">off_curve_center</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.off_curve_center" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.equation_latex">
+        <span class="sig-name descname"><span class="pre">equation_latex</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.equation_latex" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.description">
+        <span class="sig-name descname"><span class="pre">description</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.description" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="src.geometor.gibert.CubicSpec.polynomial">
+        <span class="sig-name descname"><span class="pre">polynomial</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#src.geometor.gibert.CubicSpec.polynomial" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="src.geometor.gibert.pk_isogonal">
+        <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">pk_isogonal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pivot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="centers/index.html#src.geometor.gibert.centers.BarycentricPoint" title="src.geometor.gibert.centers.BarycentricPoint"><span class="pre">src.geometor.gibert.centers.BarycentricPoint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">sympy.Expr</span></span></span><a class="headerlink" href="#src.geometor.gibert.pk_isogonal" title="Link to this definition">¶</a></dt>
+        <dd><p>Return the exact homogeneous barycentric polynomial for <code class="docutils literal notranslate"><span class="pre">pK(X6,</span> <span class="pre">P)</span></code>.</p>
+        <p>Defined as <code class="docutils literal notranslate"><span class="pre">det(M,</span> <span class="pre">M*,</span> <span class="pre">P)</span> <span class="pre">=</span> <span class="pre">0</span></code>, where <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">(x</span> <span class="pre">:</span> <span class="pre">y</span> <span class="pre">:</span> <span class="pre">z)</span></code> and
+        <code class="docutils literal notranslate"><span class="pre">M*</span> <span class="pre">=</span> <span class="pre">(a^2</span> <span class="pre">y</span> <span class="pre">z</span> <span class="pre">:</span> <span class="pre">b^2</span> <span class="pre">z</span> <span class="pre">x</span> <span class="pre">:</span> <span class="pre">c^2</span> <span class="pre">x</span> <span class="pre">y)</span></code> is the isogonal conjugate of <code class="docutils literal notranslate"><span class="pre">M</span></code>.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>pivot</strong> – Exact barycentric coordinates <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v,</span> <span class="pre">w)</span></code> of the pivot <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Expanded homogeneous cubic polynomial in <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code>.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="src.geometor.gibert.pk_isotomic">
+        <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">pk_isotomic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pivot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="centers/index.html#src.geometor.gibert.centers.BarycentricPoint" title="src.geometor.gibert.centers.BarycentricPoint"><span class="pre">src.geometor.gibert.centers.BarycentricPoint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">sympy.Expr</span></span></span><a class="headerlink" href="#src.geometor.gibert.pk_isotomic" title="Link to this definition">¶</a></dt>
+        <dd><p>Return the exact homogeneous barycentric polynomial for <code class="docutils literal notranslate"><span class="pre">pK(X2,</span> <span class="pre">P)</span></code>.</p>
+        <p>Defined as <code class="docutils literal notranslate"><span class="pre">det(M,</span> <span class="pre">M^tau,</span> <span class="pre">P)</span> <span class="pre">=</span> <span class="pre">0</span></code>, where <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">(x</span> <span class="pre">:</span> <span class="pre">y</span> <span class="pre">:</span> <span class="pre">z)</span></code> and
+        <code class="docutils literal notranslate"><span class="pre">M^tau</span> <span class="pre">=</span> <span class="pre">(y</span> <span class="pre">z</span> <span class="pre">:</span> <span class="pre">z</span> <span class="pre">x</span> <span class="pre">:</span> <span class="pre">x</span> <span class="pre">y)</span></code> is the isotomic conjugate of <code class="docutils literal notranslate"><span class="pre">M</span></code>.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>pivot</strong> – Exact barycentric coordinates <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v,</span> <span class="pre">w)</span></code> of the pivot <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Expanded homogeneous cubic polynomial in <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code>.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="src.geometor.gibert.verify_cubic_incidences">
+        <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">verify_cubic_incidences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cubic_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.geometor.gibert.verify_cubic_incidences" title="Link to this definition">¶</a></dt>
+        <dd><p>Verify exact symbolic vanishing of a K-series cubic at all claimed centers.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>cubic_id</strong> – Identifier such as <code class="docutils literal notranslate"><span class="pre">&quot;K001&quot;</span></code>.</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Mapping from each claimed Kimberling center code to <code class="docutils literal notranslate"><span class="pre">True</span></code> if verified.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="src.geometor.gibert.render_all_cubics">
+        <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">render_all_cubics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.geometor.gibert.render_all_cubics" title="Link to this definition">¶</a></dt>
+        <dd><p>Render SVG diagrams for all registered K-series cubics.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>output_dir</strong> – Optional directory override for generated SVGs.</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>List of paths to the generated SVG files.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="src.geometor.gibert.render_cubic_svg">
+        <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">render_cubic_svg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cubics/index.html#src.geometor.gibert.cubics.CubicSpec" title="src.geometor.gibert.cubics.CubicSpec"><span class="pre">src.geometor.gibert.cubics.CubicSpec</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid_n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pathlib.Path</span></span></span><a class="headerlink" href="#src.geometor.gibert.render_cubic_svg" title="Link to this definition">¶</a></dt>
+        <dd><p>Render a theme-adaptive <code class="docutils literal notranslate"><span class="pre">.euclid-graphic</span></code> SVG for a K-series cubic.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>spec</strong> – Cubic specification from <a class="reference internal" href="#src.geometor.gibert.K_SERIES_CUBICS" title="src.geometor.gibert.K_SERIES_CUBICS"><code class="xref py py-data docutils literal notranslate"><span class="pre">K_SERIES_CUBICS</span></code></a>.</p></li>
+        <li><p><strong>output_path</strong> – Destination SVG file path. Defaults to <code class="docutils literal notranslate"><span class="pre">docsrc/_static/svg/&lt;id&gt;.svg</span></code>.</p></li>
+        <li><p><strong>grid_n</strong> – Grid resolution per axis for contour extraction.</p></li>
+        </ul>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Path to the written SVG file.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py data">
         <dt class="sig sig-object py" id="src.geometor.gibert.__version__">
         <span class="sig-prename descclassname"><span class="pre">src.geometor.gibert.</span></span><span class="sig-name descname"><span class="pre">__version__</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'0.1.0'</span></span><a class="headerlink" href="#src.geometor.gibert.__version__" title="Link to this definition">¶</a></dt>
         <dd></dd></dl>
@@ -299,6 +549,7 @@
       <h3>Types</h3>
       <ul>
         <li><a href="../../../../../types/book.html">book</a></li>
+        <li><a href="../../../../../types/item.html">item</a></li>
         <li><a href="../../../../../types/log.html">log</a></li>
       </ul>
     </aside>

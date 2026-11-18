@@ -1,0 +1,155 @@
+src.geometor.gibert.cubics
+==========================
+
+.. py:module:: src.geometor.gibert.cubics
+
+.. autoapi-nested-parse::
+
+   Exact symbolic definitions and incidence verification for Gibert's K-series cubics.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   src.geometor.gibert.cubics.K_SERIES_CUBICS
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   src.geometor.gibert.cubics.CubicSpec
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   src.geometor.gibert.cubics.pk_isogonal
+   src.geometor.gibert.cubics.pk_isotomic
+   src.geometor.gibert.cubics.lemoine_cubic_polynomial
+   src.geometor.gibert.cubics.simson_cubic_polynomial
+   src.geometor.gibert.cubics.tucker_cubic_polynomial
+   src.geometor.gibert.cubics.verify_cubic_incidences
+
+
+Module Contents
+---------------
+
+.. py:class:: CubicSpec
+
+   Exact symbolic specification of a Bernard Gibert K-series triangle cubic.
+
+
+   .. py:attribute:: id
+      :type:  str
+
+
+   .. py:attribute:: order
+      :type:  int
+
+
+   .. py:attribute:: name
+      :type:  str
+
+
+   .. py:attribute:: classification
+      :type:  str
+
+
+   .. py:attribute:: conjugacy
+      :type:  str
+
+
+   .. py:attribute:: pole
+      :type:  str | None
+
+
+   .. py:attribute:: pivot
+      :type:  str | None
+
+
+   .. py:attribute:: claimed_centers
+      :type:  tuple[str, ...]
+
+
+   .. py:attribute:: off_curve_center
+      :type:  str
+
+
+   .. py:attribute:: equation_latex
+      :type:  str
+
+
+   .. py:attribute:: description
+      :type:  str
+
+
+   .. py:attribute:: polynomial
+      :type:  sympy.Expr
+
+
+.. py:function:: pk_isogonal(pivot: src.geometor.gibert.centers.BarycentricPoint) -> sympy.Expr
+
+   Return the exact homogeneous barycentric polynomial for ``pK(X6, P)``.
+
+   Defined as ``det(M, M*, P) = 0``, where ``M = (x : y : z)`` and
+   ``M* = (a^2 y z : b^2 z x : c^2 x y)`` is the isogonal conjugate of ``M``.
+
+   :param pivot: Exact barycentric coordinates ``(u, v, w)`` of the pivot ``P``.
+
+   :returns: Expanded homogeneous cubic polynomial in ``(x, y, z)``.
+
+
+.. py:function:: pk_isotomic(pivot: src.geometor.gibert.centers.BarycentricPoint) -> sympy.Expr
+
+   Return the exact homogeneous barycentric polynomial for ``pK(X2, P)``.
+
+   Defined as ``det(M, M^tau, P) = 0``, where ``M = (x : y : z)`` and
+   ``M^tau = (y z : z x : x y)`` is the isotomic conjugate of ``M``.
+
+   :param pivot: Exact barycentric coordinates ``(u, v, w)`` of the pivot ``P``.
+
+   :returns: Expanded homogeneous cubic polynomial in ``(x, y, z)``.
+
+
+.. py:function:: lemoine_cubic_polynomial() -> sympy.Expr
+
+   Return the exact homogeneous barycentric polynomial for K009 (Lemoine cubic).
+
+   Locus of ``M = (x : y : z)`` whose cevians ``MA, MB, MC`` meet the
+   perpendicular bisectors of ``BC, CA, AB`` in three collinear points.
+
+
+.. py:function:: simson_cubic_polynomial() -> sympy.Expr
+
+   Return the exact homogeneous barycentric polynomial for K010 (Simson cubic).
+
+   Locus of the tripoles (trilinear poles) of the Simson lines of ``ABC``.
+
+
+.. py:function:: tucker_cubic_polynomial() -> sympy.Expr
+
+   Return the exact homogeneous barycentric polynomial for K011 (Original Tucker cubic).
+
+   Locus of ``M = (x : y : z)`` whose cevian triangle has the same signed area
+   as the orthic triangle of ``ABC``.
+
+
+.. py:data:: K_SERIES_CUBICS
+   :type:  dict[str, CubicSpec]
+
+.. py:function:: verify_cubic_incidences(cubic_id: str) -> dict[str, bool]
+
+   Verify exact symbolic vanishing of a K-series cubic at all claimed centers.
+
+   :param cubic_id: Identifier such as ``"K001"``.
+
+   :returns: Mapping from each claimed Kimberling center code to ``True`` if verified.
+
+

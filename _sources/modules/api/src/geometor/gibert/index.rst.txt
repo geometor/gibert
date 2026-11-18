@@ -18,6 +18,9 @@ Submodules
    /modules/api/src/geometor/gibert/__main__/index
    /modules/api/src/geometor/gibert/app/index
    /modules/api/src/geometor/gibert/catalog/index
+   /modules/api/src/geometor/gibert/centers/index
+   /modules/api/src/geometor/gibert/cubics/index
+   /modules/api/src/geometor/gibert/render/index
 
 
 Attributes
@@ -25,6 +28,8 @@ Attributes
 
 .. autoapisummary::
 
+   src.geometor.gibert.CENTER_SPECS
+   src.geometor.gibert.K_SERIES_CUBICS
    src.geometor.gibert.__version__
 
 
@@ -34,6 +39,8 @@ Classes
 .. autoapisummary::
 
    src.geometor.gibert.CatalogEntrySpec
+   src.geometor.gibert.CenterSpec
+   src.geometor.gibert.CubicSpec
 
 
 Functions
@@ -45,6 +52,14 @@ Functions
    src.geometor.gibert.run
    src.geometor.gibert.assert_no_floats
    src.geometor.gibert.load_catalog_manifest
+   src.geometor.gibert.evaluate_cubic_at
+   src.geometor.gibert.isogonal_conjugate
+   src.geometor.gibert.isotomic_conjugate
+   src.geometor.gibert.pk_isogonal
+   src.geometor.gibert.pk_isotomic
+   src.geometor.gibert.verify_cubic_incidences
+   src.geometor.gibert.render_all_cubics
+   src.geometor.gibert.render_cubic_svg
 
 
 Package Contents
@@ -113,6 +128,162 @@ Package Contents
    :param manifest_path: Optional override path to a catalog manifest JSON file.
 
    :returns: Ordered list of :class:`CatalogEntrySpec` records.
+
+
+.. py:data:: CENTER_SPECS
+   :type:  dict[str, CenterSpec]
+
+.. py:class:: CenterSpec
+
+   Exact symbolic specification of a Kimberling triangle center.
+
+
+   .. py:attribute:: index
+      :type:  int
+
+
+   .. py:attribute:: code
+      :type:  str
+
+
+   .. py:attribute:: name
+      :type:  str
+
+
+   .. py:attribute:: barycentric
+      :type:  BarycentricPoint
+
+
+.. py:function:: evaluate_cubic_at(poly: sympy.Expr, pt: BarycentricPoint) -> bool
+
+   Return ``True`` iff ``poly`` vanishes identically at ``pt``.
+
+   Reduces the algebraic extensions ``S^2 = S_A S_B + S_B S_C + S_C S_A`` and
+   ``r3^2 = 3`` via exact polynomial division in SymPy.
+
+   :param poly: Homogeneous cubic polynomial in ``(x, y, z)``.
+   :param pt: Exact symbolic barycentric coordinates ``(u, v, w)``.
+
+   :returns: ``True`` if ``poly(u, v, w) == 0`` identically over ``Q(a, b, c, S, sqrt(3))``.
+
+
+.. py:function:: isogonal_conjugate(pt: BarycentricPoint) -> BarycentricPoint
+
+   Return the exact isogonal conjugate ``(a^2 y z : b^2 z x : c^2 x y)``.
+
+
+.. py:function:: isotomic_conjugate(pt: BarycentricPoint) -> BarycentricPoint
+
+   Return the exact isotomic conjugate ``(y z : z x : x y)``.
+
+
+.. py:data:: K_SERIES_CUBICS
+   :type:  dict[str, CubicSpec]
+
+.. py:class:: CubicSpec
+
+   Exact symbolic specification of a Bernard Gibert K-series triangle cubic.
+
+
+   .. py:attribute:: id
+      :type:  str
+
+
+   .. py:attribute:: order
+      :type:  int
+
+
+   .. py:attribute:: name
+      :type:  str
+
+
+   .. py:attribute:: classification
+      :type:  str
+
+
+   .. py:attribute:: conjugacy
+      :type:  str
+
+
+   .. py:attribute:: pole
+      :type:  str | None
+
+
+   .. py:attribute:: pivot
+      :type:  str | None
+
+
+   .. py:attribute:: claimed_centers
+      :type:  tuple[str, ...]
+
+
+   .. py:attribute:: off_curve_center
+      :type:  str
+
+
+   .. py:attribute:: equation_latex
+      :type:  str
+
+
+   .. py:attribute:: description
+      :type:  str
+
+
+   .. py:attribute:: polynomial
+      :type:  sympy.Expr
+
+
+.. py:function:: pk_isogonal(pivot: src.geometor.gibert.centers.BarycentricPoint) -> sympy.Expr
+
+   Return the exact homogeneous barycentric polynomial for ``pK(X6, P)``.
+
+   Defined as ``det(M, M*, P) = 0``, where ``M = (x : y : z)`` and
+   ``M* = (a^2 y z : b^2 z x : c^2 x y)`` is the isogonal conjugate of ``M``.
+
+   :param pivot: Exact barycentric coordinates ``(u, v, w)`` of the pivot ``P``.
+
+   :returns: Expanded homogeneous cubic polynomial in ``(x, y, z)``.
+
+
+.. py:function:: pk_isotomic(pivot: src.geometor.gibert.centers.BarycentricPoint) -> sympy.Expr
+
+   Return the exact homogeneous barycentric polynomial for ``pK(X2, P)``.
+
+   Defined as ``det(M, M^tau, P) = 0``, where ``M = (x : y : z)`` and
+   ``M^tau = (y z : z x : x y)`` is the isotomic conjugate of ``M``.
+
+   :param pivot: Exact barycentric coordinates ``(u, v, w)`` of the pivot ``P``.
+
+   :returns: Expanded homogeneous cubic polynomial in ``(x, y, z)``.
+
+
+.. py:function:: verify_cubic_incidences(cubic_id: str) -> dict[str, bool]
+
+   Verify exact symbolic vanishing of a K-series cubic at all claimed centers.
+
+   :param cubic_id: Identifier such as ``"K001"``.
+
+   :returns: Mapping from each claimed Kimberling center code to ``True`` if verified.
+
+
+.. py:function:: render_all_cubics(output_dir: pathlib.Path | None = None) -> list[pathlib.Path]
+
+   Render SVG diagrams for all registered K-series cubics.
+
+   :param output_dir: Optional directory override for generated SVGs.
+
+   :returns: List of paths to the generated SVG files.
+
+
+.. py:function:: render_cubic_svg(spec: src.geometor.gibert.cubics.CubicSpec, output_path: pathlib.Path | None = None, grid_n: int = 200) -> pathlib.Path
+
+   Render a theme-adaptive ``.euclid-graphic`` SVG for a K-series cubic.
+
+   :param spec: Cubic specification from :data:`K_SERIES_CUBICS`.
+   :param output_path: Destination SVG file path. Defaults to ``docsrc/_static/svg/<id>.svg``.
+   :param grid_n: Grid resolution per axis for contour extraction.
+
+   :returns: Path to the written SVG file.
 
 
 .. py:data:: __version__
