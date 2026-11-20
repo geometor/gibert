@@ -1,13 +1,13 @@
+.. image:: docsrc/_static/logo.png
+   :alt: GEOMETOR • gibert Medallion
+   :target: https://geometor.github.io/gibert/
+   :width: 150px
+   :align: right
+
 GEOMETOR • gibert
 =================
 
 **Visit the Online Archive:** https://geometor.github.io/gibert/
-
-.. image:: docsrc/_static/logo.png
-   :alt: GEOMETOR • gibert Medallion
-   :target: https://geometor.github.io/gibert/
-   :width: 180px
-   :align: center
 
 .. image:: docsrc/_static/svg/K001.svg
    :alt: GEOMETOR • gibert featured graphic
