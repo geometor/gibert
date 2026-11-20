@@ -5,7 +5,7 @@ authors = [
   { name = "phiarchitect", email = "github@geometor.com" },
 ]
 description = "Exact SymPy toolkit and GEOMETOR catalog for Bernard Gibert\u0027s Catalogue of Triangle Cubics (CTC)"
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.13"
 license = { file = "LICENSE" }
 classifiers = [
