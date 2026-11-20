@@ -6,6 +6,10 @@
 Catalogue of Triangle Cubics
 ============================
 
+.. image:: _static/medallion.svg
+   :alt: Catalogue of Triangle Cubics Medallion
+   :class: repo-medallion-hero
+
 .. include:: intro.rst
 
 
