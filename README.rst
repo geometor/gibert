@@ -3,6 +3,17 @@ GEOMETOR • gibert
 
 **Visit the Online Archive:** https://geometor.github.io/gibert/
 
+.. image:: docsrc/_static/logo.png
+   :alt: GEOMETOR • gibert Medallion
+   :target: https://geometor.github.io/gibert/
+   :width: 180px
+   :align: center
+
+.. image:: docsrc/_static/svg/K001.svg
+   :alt: GEOMETOR • gibert featured graphic
+   :target: https://geometor.github.io/gibert/
+   :align: center
+
 **Exact SymPy toolkit and GEOMETOR catalog for Bernard Gibert's Catalogue of Triangle Cubics (CTC)**
 
 Mission
