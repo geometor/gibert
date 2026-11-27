@@ -29,7 +29,7 @@ Catalog & Symbolic Toolkit
 
       .. rubric:: Mathematical Catalog · K001–K011 · Book Codex
 
-      **Catalogue of Triangle Cubics** — Inspect each cataloged cubic on its own standalone page with formal enunciation, conjugacy class, pole and pivot centers, calibrated vector locus over a scalene reference triangle $ABC$, and verified SymPy equations.
+      **Catalogue of Triangle Cubics** — Inspect each cataloged cubic on its own standalone page with formal enunciation, conjugacy class, pole and pivot centers, calibrated vector locus over a scalene reference triangle :math:`ABC`, and verified SymPy equations.
 
       .. container:: home-actions
 
