@@ -1,0 +1,512 @@
+{
+  "schema": "photon.card.v1",
+  "site": {
+    "org": "geometor",
+    "org_name": "GEOMETOR",
+    "repo": "gibert",
+    "repo_name": "gibert",
+    "title": "Catalogue of Triangle Cubics",
+    "base_url": "https://geometor.github.io/gibert",
+    "github_url": "https://github.com/geometor/gibert",
+    "emblem": "https://geometor.github.io/gibert/_static/medallion.svg"
+  },
+  "cards": {
+    "about/index": {
+      "id": "about/index",
+      "docname": "about/index",
+      "type": "article",
+      "title": "About",
+      "url": "https://geometor.github.io/gibert/about/",
+      "description": "Exact SymPy toolkit and GEOMETOR catalog for Bernard Gibert’s Catalogue of Triangle Cubics (CTC)",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "About"
+    },
+    "bibliography": {
+      "id": "bibliography",
+      "docname": "bibliography",
+      "type": "article",
+      "title": "Bibliography",
+      "url": "https://geometor.github.io/gibert/bibliography.html",
+      "description": "Bernard Gibert, Catalogue of Triangle Cubics.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Bibliography",
+      "labels": [
+        "bibliography",
+        "cite-primary-work"
+      ]
+    },
+    "catalog/K001/index": {
+      "id": "catalog/K001/index",
+      "docname": "catalog/K001/index",
+      "type": "item",
+      "title": "K001 — Neuberg Cubic",
+      "url": "https://geometor.github.io/gibert/catalog/K001/",
+      "description": "Isogonal pivotal cubic with pole X(6) and pivot X(30) (Euler infinity point): locus of points M such that M, its isogonal conjugate M, and X(30) are collinear, equivalently MM is parallel to the Euler line.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K001.svg",
+      "image_alt": "K001 — Neuberg Cubic",
+      "labels": [
+        "gibert-k001"
+      ]
+    },
+    "catalog/K002/index": {
+      "id": "catalog/K002/index",
+      "docname": "catalog/K002/index",
+      "type": "item",
+      "title": "K002 — Thomson Cubic",
+      "url": "https://geometor.github.io/gibert/catalog/K002/",
+      "description": "Isogonal pivotal cubic with pole X(6) and pivot X(2) (centroid): locus of points M such that M, its isogonal conjugate M, and X(2) are collinear.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K002.svg",
+      "image_alt": "K002 — Thomson Cubic",
+      "labels": [
+        "gibert-k002"
+      ]
+    },
+    "catalog/K003/index": {
+      "id": "catalog/K003/index",
+      "docname": "catalog/K003/index",
+      "type": "item",
+      "title": "K003 — McCay Cubic",
+      "url": "https://geometor.github.io/gibert/catalog/K003/",
+      "description": "Isogonal pivotal cubic with pole X(6) and pivot X(3) (circumcenter): locus of points M such that M, its isogonal conjugate M, and X(3) are collinear; its three real asymptotes concur at X(2) making pairwise angles of 60 degrees.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K003.svg",
+      "image_alt": "K003 — McCay Cubic",
+      "labels": [
+        "gibert-k003"
+      ]
+    },
+    "catalog/K004/index": {
+      "id": "catalog/K004/index",
+      "docname": "catalog/K004/index",
+      "type": "item",
+      "title": "K004 — Darboux Cubic",
+      "url": "https://geometor.github.io/gibert/catalog/K004/",
+      "description": "Isogonal pivotal cubic with pole X(6) and pivot X(20) (de Longchamps point): central at X(3) and locus of points M whose pedal triangle is a cevian triangle.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K004.svg",
+      "image_alt": "K004 — Darboux Cubic",
+      "labels": [
+        "gibert-k004"
+      ]
+    },
+    "catalog/K005/index": {
+      "id": "catalog/K005/index",
+      "docname": "catalog/K005/index",
+      "type": "item",
+      "title": "K005 — Napoleon–Feuerbach Cubic",
+      "url": "https://geometor.github.io/gibert/catalog/K005/",
+      "description": "Isogonal pivotal cubic with pole X(6) and pivot X(5) (nine-point center): passes through the Napoleon points X(17), X(18) and Kosnita point X(54).",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K005.svg",
+      "image_alt": "K005 — Napoleon–Feuerbach Cubic",
+      "labels": [
+        "gibert-k005"
+      ]
+    },
+    "catalog/K006/index": {
+      "id": "catalog/K006/index",
+      "docname": "catalog/K006/index",
+      "type": "item",
+      "title": "K006 — Orthocubic",
+      "url": "https://geometor.github.io/gibert/catalog/K006/",
+      "description": "Isogonal pivotal cubic with pole X(6) and pivot X(4) (orthocenter): locus of points M such that M, its isogonal conjugate M, and X(4) are collinear.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K006.svg",
+      "image_alt": "K006 — Orthocubic",
+      "labels": [
+        "gibert-k006"
+      ]
+    },
+    "catalog/K007/index": {
+      "id": "catalog/K007/index",
+      "docname": "catalog/K007/index",
+      "type": "item",
+      "title": "K007 — Lucas Cubic",
+      "url": "https://geometor.github.io/gibert/catalog/K007/",
+      "description": "Isotomic pivotal cubic with pole X(2) and pivot X(69) (isotomic conjugate of X(4)): locus of points M whose cevian triangle is orthologic to ABC.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K007.svg",
+      "image_alt": "K007 — Lucas Cubic",
+      "labels": [
+        "gibert-k007"
+      ]
+    },
+    "catalog/K008/index": {
+      "id": "catalog/K008/index",
+      "docname": "catalog/K008/index",
+      "type": "item",
+      "title": "K008 — Droussent Cubic",
+      "url": "https://geometor.github.io/gibert/catalog/K008/",
+      "description": "Circular isotomic pivotal cubic with pole X(2) and pivot X(316) (isotomic conjugate of X(67)).",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K008.svg",
+      "image_alt": "K008 — Droussent Cubic",
+      "labels": [
+        "gibert-k008"
+      ]
+    },
+    "catalog/K009/index": {
+      "id": "catalog/K009/index",
+      "docname": "catalog/K009/index",
+      "type": "item",
+      "title": "K009 — Lemoine Cubic",
+      "url": "https://geometor.github.io/gibert/catalog/K009/",
+      "description": "Nodal cubic with perpendicular nodal tangents at X(3): locus of points M whose cevians MA, MB, MC meet the perpendicular bisectors of BC, CA, AB in three collinear points.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K009.svg",
+      "image_alt": "K009 — Lemoine Cubic",
+      "labels": [
+        "gibert-k009"
+      ]
+    },
+    "catalog/K010/index": {
+      "id": "catalog/K010/index",
+      "docname": "catalog/K010/index",
+      "type": "item",
+      "title": "K010 — Simson Cubic",
+      "url": "https://geometor.github.io/gibert/catalog/K010/",
+      "description": "Locus of the tripoles (trilinear poles) of the Simson lines of the reference triangle ABC, with an acnode at the centroid X(2).",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K010.svg",
+      "image_alt": "K010 — Simson Cubic",
+      "labels": [
+        "gibert-k010"
+      ]
+    },
+    "catalog/K011/index": {
+      "id": "catalog/K011/index",
+      "docname": "catalog/K011/index",
+      "type": "item",
+      "title": "K011 — Tucker Cubic",
+      "url": "https://geometor.github.io/gibert/catalog/K011/",
+      "description": "Original Tucker cubic: locus of points M whose cevian triangle has the same signed area as the orthic triangle of ABC.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K011.svg",
+      "image_alt": "K011 — Tucker Cubic",
+      "labels": [
+        "gibert-k011"
+      ]
+    },
+    "catalog/index": {
+      "id": "catalog/index",
+      "docname": "catalog/index",
+      "type": "book",
+      "title": "Catalogue of Triangle Cubics",
+      "url": "https://geometor.github.io/gibert/catalog/",
+      "description_source": "empty",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/svg/K001.svg",
+      "image_alt": "K001 — Neuberg Cubic",
+      "facets": {
+        "author": "Bernard Gibert",
+        "year": "2000",
+        "year_sort": 2000,
+        "year_label": "2000–present",
+        "year_display": "2000–present",
+        "edition_year": "2026"
+      },
+      "labels": [
+        "gibert-catalog"
+      ]
+    },
+    "changelog": {
+      "id": "changelog",
+      "docname": "changelog",
+      "type": "article",
+      "title": "changelog",
+      "url": "https://geometor.github.io/gibert/changelog.html",
+      "description": "Initialize geometor.gibert (catalog archetype): Exact SymPy toolkit and GEOMETOR catalog for Bernard Gibert’s Catalogue of Triangle Cubics (CTC).",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "changelog"
+    },
+    "connect": {
+      "id": "connect",
+      "docname": "connect",
+      "type": "article",
+      "title": "Connect",
+      "url": "https://geometor.github.io/gibert/connect.html",
+      "description": "Join the discussion, report issues, or contribute via GitHub:",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Connect"
+    },
+    "demos/demo": {
+      "id": "demos/demo",
+      "docname": "demos/demo",
+      "type": "article",
+      "title": "Demo",
+      "url": "https://geometor.github.io/gibert/demos/demo.html",
+      "description_source": "empty",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Demo"
+    },
+    "demos/index": {
+      "id": "demos/index",
+      "docname": "demos/index",
+      "type": "article",
+      "title": "Demos",
+      "url": "https://geometor.github.io/gibert/demos/",
+      "description": "Executable demonstration scripts in demos/:",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Demos"
+    },
+    "glossary": {
+      "id": "glossary",
+      "docname": "glossary",
+      "type": "article",
+      "title": "Glossary",
+      "url": "https://geometor.github.io/gibert/glossary.html",
+      "description": "Open-source scholarly and symbolic engineering workspace containing geometor.gibert.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Glossary"
+    },
+    "index": {
+      "id": "index",
+      "docname": "index",
+      "type": "project",
+      "title": "Catalogue of Triangle Cubics",
+      "url": "https://geometor.github.io/gibert/",
+      "description": "Inspired by Bernard Gibert’s Catalogue of Triangle Cubics (CTC), this digital edition models classical pivotal, non-pivotal, and central triangle cubics as atomic, one-item-per-page symbolic constructions in exact SymPy algebra. Every…",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Catalogue of Triangle Cubics Medallion"
+    },
+    "log/26.321-000000/index": {
+      "id": "log/26.321-000000/index",
+      "docname": "log/26.321-000000/index",
+      "type": "log",
+      "title": "Initialize gibert (catalog)",
+      "url": "https://geometor.github.io/gibert/log/26.321-000000/",
+      "description": "Initialized geometor.gibert (catalog archetype) via clerk init: Exact SymPy toolkit and GEOMETOR catalog for Bernard Gibert’s Catalogue of Triangle Cubics (CTC).",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Initialize gibert (catalog)",
+      "facets": {
+        "author": "phiarchitect",
+        "date": "26.321-000000",
+        "tags": [
+          "init",
+          "catalog"
+        ],
+        "categories": [
+          "initialization"
+        ]
+      }
+    },
+    "log/index": {
+      "id": "log/index",
+      "docname": "log/index",
+      "type": "article",
+      "title": "Log",
+      "url": "https://geometor.github.io/gibert/log/",
+      "description": "Chronological development and research log for geometor.gibert.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Log"
+    },
+    "modules/api/src/geometor/gibert/__main__/index": {
+      "id": "modules/api/src/geometor/gibert/__main__/index",
+      "docname": "modules/api/src/geometor/gibert/__main__/index",
+      "type": "article",
+      "title": "src.geometor.gibert.__main__",
+      "url": "https://geometor.github.io/gibert/modules/api/src/geometor/gibert/__main__/",
+      "description": "Package entry point for python -m geometor.gibert.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "src.geometor.gibert.__main__"
+    },
+    "modules/api/src/geometor/gibert/app/index": {
+      "id": "modules/api/src/geometor/gibert/app/index",
+      "docname": "modules/api/src/geometor/gibert/app/index",
+      "type": "article",
+      "title": "src.geometor.gibert.app",
+      "url": "https://geometor.github.io/gibert/modules/api/src/geometor/gibert/app/",
+      "description": "Command-line interface for geometor.gibert.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "src.geometor.gibert.app"
+    },
+    "modules/api/src/geometor/gibert/catalog/index": {
+      "id": "modules/api/src/geometor/gibert/catalog/index",
+      "docname": "modules/api/src/geometor/gibert/catalog/index",
+      "type": "article",
+      "title": "src.geometor.gibert.catalog",
+      "url": "https://geometor.github.io/gibert/modules/api/src/geometor/gibert/catalog/",
+      "description": "Catalog manifest loader and exact-symbolic validation helpers.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "src.geometor.gibert.catalog"
+    },
+    "modules/api/src/geometor/gibert/centers/index": {
+      "id": "modules/api/src/geometor/gibert/centers/index",
+      "docname": "modules/api/src/geometor/gibert/centers/index",
+      "type": "article",
+      "title": "src.geometor.gibert.centers",
+      "url": "https://geometor.github.io/gibert/modules/api/src/geometor/gibert/centers/",
+      "description": "Exact symbolic barycentric coordinates for Kimberling triangle centers.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "src.geometor.gibert.centers"
+    },
+    "modules/api/src/geometor/gibert/cubics/index": {
+      "id": "modules/api/src/geometor/gibert/cubics/index",
+      "docname": "modules/api/src/geometor/gibert/cubics/index",
+      "type": "article",
+      "title": "src.geometor.gibert.cubics",
+      "url": "https://geometor.github.io/gibert/modules/api/src/geometor/gibert/cubics/",
+      "description": "Exact symbolic definitions and incidence verification for Gibert’s K-series cubics.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "src.geometor.gibert.cubics"
+    },
+    "modules/api/src/geometor/gibert/index": {
+      "id": "modules/api/src/geometor/gibert/index",
+      "docname": "modules/api/src/geometor/gibert/index",
+      "type": "article",
+      "title": "src.geometor.gibert",
+      "url": "https://geometor.github.io/gibert/modules/api/src/geometor/gibert/",
+      "description": "Public package interface for geometor.gibert.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "src.geometor.gibert"
+    },
+    "modules/api/src/geometor/gibert/render/index": {
+      "id": "modules/api/src/geometor/gibert/render/index",
+      "docname": "modules/api/src/geometor/gibert/render/index",
+      "type": "article",
+      "title": "src.geometor.gibert.render",
+      "url": "https://geometor.github.io/gibert/modules/api/src/geometor/gibert/render/",
+      "description": "Theme-adaptive .euclid-graphic SVG renderer for K-series triangle cubics.",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "src.geometor.gibert.render"
+    },
+    "modules/index": {
+      "id": "modules/index",
+      "docname": "modules/index",
+      "type": "article",
+      "title": "Modules",
+      "url": "https://geometor.github.io/gibert/modules/",
+      "description": "API summary for geometor.gibert:",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Modules"
+    },
+    "people/gibert": {
+      "id": "people/gibert",
+      "docname": "people/gibert",
+      "type": "person",
+      "title": "Bernard Gibert",
+      "url": "https://geometor.github.io/gibert/people/gibert.html",
+      "description": "French geometer and creator of the Catalogue of Triangle Cubics (CTC), classifying over 1,600 triangle cubics by barycentric equations, pivots, and Kimberling ETC centers.",
+      "description_source": "summary",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Bernard Gibert",
+      "facets": {
+        "era": "Contemporary Geometry",
+        "languages": [
+          "French",
+          "English"
+        ]
+      },
+      "labels": [
+        "person-gibert",
+        "person-primary-author"
+      ]
+    },
+    "people/index": {
+      "id": "people/index",
+      "docname": "people/index",
+      "type": "article",
+      "title": "People",
+      "url": "https://geometor.github.io/gibert/people/",
+      "description": "Authors, curators, and cited figures for Bernard Gibert’s Catalogue of Triangle Cubics.",
+      "description_source": "meta",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "People",
+      "labels": [
+        "persons"
+      ]
+    },
+    "people/phi-architect": {
+      "id": "people/phi-architect",
+      "docname": "people/phi-architect",
+      "type": "person",
+      "title": "phi ARCHITECT",
+      "url": "https://geometor.github.io/gibert/people/phi-architect.html",
+      "description": "Founder of GEOMETOR and curator of exact symbolic models and Digital Scriptorium editions.",
+      "description_source": "summary",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "phi ARCHITECT",
+      "facets": {
+        "era": "Contemporary Geometry",
+        "languages": [
+          "English"
+        ]
+      },
+      "labels": [
+        "person-phi-architect"
+      ]
+    },
+    "todos/index": {
+      "id": "todos/index",
+      "docname": "todos/index",
+      "type": "article",
+      "title": "Todos",
+      "url": "https://geometor.github.io/gibert/todos/",
+      "description_source": "empty",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Todos"
+    },
+    "usage/index": {
+      "id": "usage/index",
+      "docname": "usage/index",
+      "type": "article",
+      "title": "Usage",
+      "url": "https://geometor.github.io/gibert/usage/",
+      "description": "Run the gibert command-line interface or verify the repository locally with uv on Python 3.13:",
+      "description_source": "fallback",
+      "emblem": "https://geometor.github.io/gibert/_static/medallion.svg",
+      "image_alt": "Usage"
+    }
+  },
+  "labels": {
+    "bibliography": "bibliography",
+    "cite-primary-work": "bibliography",
+    "gibert-k001": "catalog/K001/index",
+    "gibert-k002": "catalog/K002/index",
+    "gibert-k003": "catalog/K003/index",
+    "gibert-k004": "catalog/K004/index",
+    "gibert-k005": "catalog/K005/index",
+    "gibert-k006": "catalog/K006/index",
+    "gibert-k007": "catalog/K007/index",
+    "gibert-k008": "catalog/K008/index",
+    "gibert-k009": "catalog/K009/index",
+    "gibert-k010": "catalog/K010/index",
+    "gibert-k011": "catalog/K011/index",
+    "gibert-catalog": "catalog/index",
+    "person-gibert": "people/gibert",
+    "person-primary-author": "people/gibert",
+    "persons": "people/index",
+    "person-phi-architect": "people/phi-architect"
+  }
+}
